@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instytut im. Grabińskiego - Sieć Wewnętrzna</title>
+    <title>Instytut im. Stefana Grabińskiego - Intranet	</title>
     <style>
         :root {
             --term-white: #ffffff;
@@ -333,7 +333,7 @@
 
     <div id="hub-screen" class="hidden">
         <div class="logo-container">
-            <img src="logo.png" alt="Logo Instytutu Grabińskiego" class="logo-img" style="max-width: 90px;">
+            <img src="logo2.png" alt="Logo Instytutu Grabińskiego" class="logo-img" style="max-width: 420px;">
         </div>
         <h2 id="welcome-header">WĘZEŁ CENTRALNY // ZALOGOWANO</h2>
         <p style="text-align: center; font-size: 0.9rem;">Moduły systemowe:</p>
@@ -355,7 +355,7 @@
         <div class="tech-info">
             <p><strong>Status sieci:</strong> STABILNA (WĘZEŁ-WROCŁAW)</p>
             <p><strong>Administrator systemów:</strong> @skeye-blue</p>
-            <p><strong>Komunikat bezpieczeństwa:</strong> Przypominamy o kategorycznym zakazie podłączania zewnętrznych nośników do urządzeń w Serwerpwmo. Wykryte próby będą skutkować blokadą konta.</p>
+            <p><strong>Komunikat bezpieczeństwa:</strong> Przypominamy o kategorycznym zakazie podłączania zewnętrznych nośników do urządzeń w Serwerowni. Wykryte próby będą skutkować blokadą konta.</p>
             <p>W przypadku wykrycia błędu lub otrzymania podejrzanych wiadomości mailowych należy zgłosić incydent.</p>
         </div>
         <button class="term-btn" style="width: 100%;" onclick="alert('Nie mamy teraz czasu. Zajmiemy się sprawą w ciągu 14 dni roboczych.')">
@@ -365,7 +365,7 @@
 
     <div id="presence-screen" class="presence-box hidden">
         <h2>MONITOR SYSTEMOWY: LOKALNA LISTA OBECNOŚCI</h2>
-        <p style="font-size: 0.9rem; margin-bottom: 5px;">Aktualny status zalogowanych stacji w oddziale we Wrocław.</p>
+        <p style="font-size: 0.9rem; margin-bottom: 5px;">Aktualny status pracowników w oddziale we Wrocławiu.</p>
         <p style="font-size: 0.8rem; color: #888; margin-top: 0;" class="blink">(Przesuń palcem w poziomie, aby zobaczyć całą tabelę jeśli używasz telefonu)</p>
         
         <div class="table-responsive-container">
@@ -374,7 +374,7 @@
                     <tr>
                         <th>ID PRACOWNIKA</th>
                         <th>STANOWISKO / DZIAŁ</th>
-                        <th>STATUS SEC</th>
+                        <th>STATUS</th>
                         <th>LOKALIZACJA WĘZŁA</th>
                     </tr>
                 </thead>
@@ -392,28 +392,28 @@
                         <td>Czytelnia Główna</td>
                     </tr>
                     <tr>
-                        <td>s.borowski</td>
-                        <td>Archiwista Tekstów</td>
+                        <td>a.zabek</td>
+                        <td>Grafik</td>
                         <td class="status-offline-text"><span class="status-dot offline"></span> OFFLINE</td>
                         <td>Brak (Zdalny)</td>
                     </tr>
                     <tr>
-                        <td>a.kowalska</td>
-                        <td>Dział Analiz Fizycznych</td>
+                        <td>alex</td>
+                        <td>????</td>
                         <td class="status-online"><span class="status-dot"></span> ONLINE</td>
-                        <td>Laboratorium -1</td>
+                        <td>Kuchnia</td>
                     </tr>
                     <tr>
-                        <td>t.wronecki</td>
-                        <td>Kustosz Zbiorów</td>
+                        <td>b.wawrzynski</td>
+                        <td>Konserwator</td>
                         <td class="status-offline-text"><span class="status-dot offline"></span> OFFLINE</td>
                         <td>Urlop Zdrowotny</td>
                     </tr>
                     <tr>
-                        <td>j.witt</td>
-                        <td>Młodszy Badacz</td>
-                        <td class="status-online"><span class="status-dot"></span> ONLINE</td>
-                        <td>Magazyn Starodruków</td>
+                        <td>damianek</td>
+                        <td>Egzorcysta</td>
+                        <td class="status-offline-text"><span class="status-dot"></span> OFFLINE</td>
+                        <td>Brak (Zdalny)</td>
                     </tr>
                 </tbody>
             </table>
@@ -428,7 +428,8 @@
 <script>
     const users = {
         "m.dramat": "pass123",
-        "g.zielinska": "dyr123"
+        "g.zielinska": "dyr123",
+        "admin": "admin"
     };
 
     let currentUser = "";
@@ -449,7 +450,7 @@
             if (user === 'g.zielinska') {
                 header.innerText = `WĘZEŁ CENTRALNY // ZALOGOWANO: DYREKTOR_${user.toUpperCase().replace('.', '_')}`;
             } else {
-                header.innerText = `WĘZEŁ CENTRALNY // ZALOGOWANO: RESEARCHER_${user.toUpperCase().replace('.', '_')}`;
+                header.innerText = `WĘZEŁ CENTRALNY // ZALOGOWANO: BADACZ_${user.toUpperCase().replace('.', '_')}`;
             }
         } else {
             errorBox.innerText = "BŁĄD SYSTEMU: ODMOWA DOSTĘPU. NIEPRAWIDŁOWE DANE.";
